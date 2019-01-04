@@ -1,10 +1,12 @@
 import React from "react";
-//import data from "../data/products.json";
+
+import classes from "./product-list-item.css";
+import Button from "../../components/AddButton/button";
+import RemoveButton from "../../components/RemoveButton/RemoveButton";
 
 const ProductListItem = props => {
-  console.log("erro", props);
   return (
-    <div>
+    <div className={classes.ProductItem}>
       <h3>{props.product.name}</h3>
       <img
         height={100}
@@ -16,7 +18,18 @@ const ProductListItem = props => {
       <div>{props.product.price}$</div>
       <div>{props.product.id}</div>
       <div>
-        <button>Add to cart</button>
+        <Button
+          cartItem={props.cartItem}
+          product={props.product}
+          addToCart={props.addToCart}
+        />
+        {props.cartItem ? (
+          <RemoveButton
+            cartItem={props.cartItem}
+            product={props.product}
+            removeFromCart={props.removeFromCart}
+          />
+        ) : null}
       </div>
     </div>
   );

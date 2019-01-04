@@ -1,0 +1,11 @@
+.ProductListing {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.ProductItem {
+  padding: 10px 30px;
+  width: 200px;
+}
