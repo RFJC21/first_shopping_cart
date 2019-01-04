@@ -11,6 +11,7 @@ const ProductListItem = props => {
       <img
         height={100}
         title={props.product.name}
+        alt="bob"
         src={`/products/${props.product.image}`}
       />
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import Productlistitem from "../features/product-listing/product-list-item";
+//import Productlistitem from "../features/product-listing/product-list-item";
 import data from "../data/products.json";
 import Productlisting from "../features/product-listing";
 

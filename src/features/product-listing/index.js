@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import ProductListItem from "./product-list-item";
 import classes from "../product-listing/product-list-item.css";
 import * as actionTypes from "../cart/actions";
-import cartItemsWithQuantity from "../cart/index";
+//import cartItemsWithQuantity from "../cart/index";
 
 const productlisting = props => {
   return (
@@ -15,7 +15,9 @@ const productlisting = props => {
           key={product.id}
           addToCart={props.addToCart}
           removeFromCart={props.removeFromCart}
-          cartItem={props.cart.filter(cartItem => cartItem.id === product.id)[0]}
+          cartItem={
+            props.cart.filter(cartItem => cartItem.id === product.id)[0]
+          }
         />
       ))}
     </div>
